@@ -29,6 +29,9 @@
     <input type="text" name="rating">
     <button>Submit</button>
   </form>
+  <ul>
+
+  </ul>
 </div>
 <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
 <script>
@@ -49,8 +52,8 @@
         $(this).parent().remove();
         return;
     });
-    $(".container").append("<p>" + movieTitle.val() + " : " + rating.val() + "</p>");
-    $(".container p").append(" ").append(deleteButton);
+    let bogus = $("<li>" + movieTitle.val() + " : " + rating.val() + "</li>").append(deleteButton);
+    $("ul").append(bogus);
   });
 </script>
 </body>
